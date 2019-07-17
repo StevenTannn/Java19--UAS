@@ -78,8 +78,8 @@ public class Inventory {
 	// kembalikan list items yang diurutkan berdasarkan harga item (descending)
 	public List<InventoryItem> getOrderByPrice() { 
 		this.items.sort(new Comparator<InventoryItem>() {
-				public int compare(InventoryItem I1, InventoryItem I2) {
-					return (int)(I1.getItem().getPrice()- I2.getItem().getPrice()) * -1;
+				public int compare(InventoryItem Item1, InventoryItem Item2) {
+					return (int)(Item1.getItem().getPrice()- Item2.getItem().getPrice()) *-1;
 				}
 		});
 		return this.items;
@@ -87,8 +87,8 @@ public class Inventory {
 	// kembalikan list items yang diurutukan berdasarkan berat item (descending)
 	public List<InventoryItem> getOrderByWeight() { 
 		this.items.sort(new Comparator<InventoryItem>() {
-				public int compare(InventoryItem I1, InventoryItem I2) {
-					return (int)(I1.getItem().getWeight()*100- I2.getItem().getWeight()*100) * -1;
+				public int compare(InventoryItem Item1, InventoryItem Item2) {
+					return (int)(Item1.getItem().getWeight()*100- Item2.getItem().getWeight()*100) * -1;
 				}
 		});
 		return this.items;
@@ -96,8 +96,8 @@ public class Inventory {
 	// kembalikan list items yang diurutkan berdasarkan qty item (descending)
 	public List<InventoryItem> getOrderByQty() { 
 		this.items.sort(new Comparator<InventoryItem>() {
-				public int compare(InventoryItem I1, InventoryItem I2) {
-					return (int)(I1.getQty()- I2.getQty()) * -1;
+				public int compare(InventoryItem Item1, InventoryItem Item2) {
+					return (int)(Item1.getQty()- Item2.getQty()) * -1;
 				}
 		});
 		return this.items;
